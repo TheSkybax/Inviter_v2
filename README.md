@@ -48,31 +48,38 @@ npm install
 3. Edit `config.json` to configure which roles should be awarded:
    ```json
    {
-     "roleConfigs": [
-       {
-         "roleId": "1234567890123456789",
-         "roleName": "Inviter",
-         "conditions": [
-           {
-             "type": "isMember",
-             "description": "Award role when someone invites a member"
-           }
-         ]
-       },
-       {
-         "roleId": "9876543210987654321",
-         "roleName": "VIP Inviter",
-         "conditions": [
-           {
-             "type": "hasRole",
-             "roleId": "1111111111111111111",
-             "roleName": "VIP",
-             "description": "Award role when someone invites a member with VIP role"
-           }
-         ]
-       }
-     ]
-   }
+  "logging": {
+    "enabled": false,
+    "channelId": "1234567890",
+    "description": "When enabled, console output is mirrored to this channel. Use a channel ID."
+  },
+  "roleConfigs": [
+    {
+      "roleId": "1234567890",
+      "roleName": "VIP",
+      "conditions": [
+        {
+          "type": "hasAnyRole",
+          "roleIds": ["123456789", "987654321"],
+          "roleNames": ["Active 1", "Active 2"],
+          "description": "Award ONE role to inviter if invitee has ANY ONE of the specified roles. Use roleIds array and/or roleNames array."
+        }
+      ]
+    }
+  ],
+  "thresholdRewards": [
+    {
+      "rewardRoleId": "1234567890",
+      "rewardRoleName": "Super VIP",
+      "requiredRoleIds": ["123456789", "987654321"],
+      "requiredRoleNames": ["Active 1", "Active 2"],
+      "threshold": 3,
+      "description": "Award ONE rewardRole to inviter when 3+ invitees have ANY ONE of the specified requiredRoles. Each invitee only needs to have one of the required roles to count."
+    }
+  ]
+}
+
+
    ```
 
 ### Configuration Options
