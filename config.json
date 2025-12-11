@@ -1,0 +1,32 @@
+{
+  "logging": {
+    "enabled": true,
+    "channelId": "",
+    "description": "When enabled, console output is mirrored to this channel. Use a channel ID."
+  },
+  "roleConfigs": [
+    {
+      "roleId": "",
+      "roleName": "",
+      "conditions": [
+        {
+          "type": "hasAnyRole",
+          "roleIds": ["", "", "", ""],
+          "roleNames": ["", "", "", ""],
+          "description": "Award ONE role to inviter if invitee has ANY ONE of the specified roles. Use roleIds array and/or roleNames array."
+        }
+      ]
+    }
+  ],
+  "thresholdRewards": [
+    {
+      "rewardRoleId": "",
+      "rewardRoleName": "",
+      "requiredRoleIds": ["", "", "", ""],
+      "requiredRoleNames": ["", "", "", ""],
+      "threshold": 3,
+      "description": "Award ONE rewardRole to inviter when 3+ invitees have ANY ONE of the specified requiredRoles. Each invitee only needs to have one of the required roles to count."
+    }
+  ]
+}
+

@@ -1,0 +1,22 @@
+{
+  "name": "discord-invite-tracker-bot",
+  "version": "1.0.0",
+  "description": "Discord bot that tracks invitations and manages roles based on invitee status",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "invite",
+    "tracker"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1"
+  }
+}
+
