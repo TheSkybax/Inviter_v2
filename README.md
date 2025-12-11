@@ -38,10 +38,7 @@ npm install
 
 ### 4. Configuration
 
-1. Copy `.env.example` to `.env`:
-   ```bash
-   copy .env.example .env
-   ```
+1. Create `.env` file:
 
 2. Edit `.env` and add your bot token:
    ```
