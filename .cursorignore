@@ -1,7 +1,0 @@
-node_modules/
-*.log
-inviteData.json
-
-# Note: .env is NOT ignored here so it's visible in Cursor
-# It's still in .gitignore for security (won't be committed to git)
-
