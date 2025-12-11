@@ -48,12 +48,12 @@ npm install
 3. Edit `config.json` to configure which roles should be awarded:
    ```json
    {
-  "logging": {
+     "logging": {
     "enabled": false,
     "channelId": "1234567890",
     "description": "When enabled, console output is mirrored to this channel. Use a channel ID."
-  },
-  "roleConfigs": [
+     },
+     "roleConfigs": [
     {
       "roleId": "1234567890",
       "roleName": "VIP",
@@ -66,8 +66,8 @@ npm install
         }
       ]
     }
-  ],
-  "thresholdRewards": [
+     ],
+     "thresholdRewards": [
     {
       "rewardRoleId": "1234567890",
       "rewardRoleName": "Super VIP",
@@ -76,8 +76,8 @@ npm install
       "threshold": 3,
       "description": "Award ONE rewardRole to inviter when 3+ invitees have ANY ONE of the specified requiredRoles. Each invitee only needs to have one of the required roles to count."
     }
-  ]
-}
+     ]
+   }
 
 
    ```
